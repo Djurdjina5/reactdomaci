@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsPlusLg, BsDashLg } from "react-icons/bs";
 
-const OneProduct = ({ product } ) => {
+const OneProduct = ({ product,onAdd,onRemove } ) => {
   return (
        <div className="card">
       <img className="card-img-top" src={product.url} alt="image" />
@@ -11,12 +11,14 @@ const OneProduct = ({ product } ) => {
         <p className="card-price">{product.price}rsd</p>
           </div>
           <>
-        <a className="btn">
+        <button className="btn"
+          onClick={() => onAdd(product.id)}>
           <BsPlusLg/>
-        </a>
-        <a className="btn">
+        </button>
+        <button className="btn"
+         onClick={() => onRemove(product.id)}>
           <BsDashLg/>
-        </a>
+        </button>
         </>
       </div>
   

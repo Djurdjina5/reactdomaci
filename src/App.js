@@ -2,9 +2,13 @@ import './App.css';
 import { Main } from './components/Main';
 import Products from './components/Products';
 import NavBar from './components/NavBar';
+import Cart from './components/Cart';
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+   const [cartNum, setCartNum] = useState(0);
+  const [cartProducts, setCartProducts] = useState([]);
    const [products, setProducts] = useState([
       {
       id: 1,
@@ -13,6 +17,7 @@ function App() {
       description:
            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
     {
       id: 2,
@@ -21,6 +26,7 @@ function App() {
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
      price:"455,00",
+      amount: 0,
     },
     {
       id: 3,
@@ -29,6 +35,7 @@ function App() {
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
      {
       id: 4,
@@ -37,6 +44,7 @@ function App() {
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
       {
       id: 5,
@@ -45,6 +53,7 @@ function App() {
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
       {
       id: 6,
@@ -53,6 +62,7 @@ function App() {
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
      {
       id: 7,
@@ -61,6 +71,7 @@ function App() {
       description:
            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
     {
       id: 8,
@@ -69,6 +80,7 @@ function App() {
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
      price:"455,00",
+      amount: 0,
     },
     {
       id: 9,
@@ -77,6 +89,7 @@ function App() {
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
      {
       id: 10,
@@ -85,6 +98,7 @@ function App() {
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
       {
       id: 11,
@@ -93,6 +107,7 @@ function App() {
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     },
       {
       id: 12,
@@ -101,14 +116,55 @@ function App() {
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455,00",
+         amount: 0,
     }
-
   ]);
+  function refreshCart() {
+    let newProducts = products.filter((product) => product.amount > 0);
+    setCartProducts(newProducts);
+  }
+  function addToCart(id) {
+    setCartNum(cartNum + 1);
+    products.forEach((product) => {
+      if (product.id === id) {
+        product.amount++;
+      }
+    });
+    refreshCart();
+  }
+  function removeFromCart(id) {
+    products.forEach((product) => {
+      if (product.id === id) {
+        if (product.amount > 0) {
+          product.amount--;
+          setCartNum(cartNum - 1);
+        }
+      }
+    });
+    refreshCart();
+  }
   return (
-    <div className="App">
-      <NavBar />
-        <Products products={products} />
-    </div>
+  <BrowserRouter className="App">
+    <NavBar cartNum={cartNum}></NavBar>
+      <Routes>
+        <Route
+        path="/"
+        element={
+        <Products
+          products={products} 
+          onAdd={addToCart}  
+          onRemove={removeFromCart}/>}
+        />
+        <Route 
+        path="/cart" element={
+        <Cart 
+        products={cartProducts}
+        onAdd={addToCart} 
+        onRemove={removeFromCart}/>}
+        />
+      </Routes>
+    </BrowserRouter>
+
   );
   }
 
