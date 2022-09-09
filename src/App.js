@@ -16,7 +16,7 @@ function App() {
       title: "illy intenso",
       description:
            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
     {
@@ -25,7 +25,7 @@ function App() {
       title: "illy forte",
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-     price:"455,00",
+     price:"455.00",
       amount: 0,
     },
     {
@@ -34,7 +34,7 @@ function App() {
       title: "Nespresso Premium",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
      {
@@ -43,7 +43,7 @@ function App() {
       title: "Nespresso Miami",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
       {
@@ -52,7 +52,7 @@ function App() {
       title: "Nespresso Chiaro",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
       {
@@ -61,7 +61,7 @@ function App() {
       title: "Nespresso Miami",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
      {
@@ -70,7 +70,7 @@ function App() {
       title: "illy intenso",
       description:
            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
     {
@@ -79,7 +79,7 @@ function App() {
       title: "illy forte",
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-     price:"455,00",
+     price:"455.00",
       amount: 0,
     },
     {
@@ -88,7 +88,7 @@ function App() {
       title: "Nespresso Premium",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
      {
@@ -97,7 +97,7 @@ function App() {
       title: "Nespresso Miami",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
       {
@@ -106,7 +106,7 @@ function App() {
       title: "Nespresso Chiaro",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     },
       {
@@ -115,7 +115,7 @@ function App() {
       title: "Nespresso Miami",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455,00",
+        price:"455.00",
          amount: 0,
     }
   ]);
@@ -145,22 +145,34 @@ function App() {
   }
   return (
   <BrowserRouter className="App">
-    <NavBar cartNum={cartNum}></NavBar>
       <Routes>
         <Route
         path="/"
         element={
+          <Main/>
+        }
+        />
+        <Route
+        path="/products"
+        element={
+          <>
+        <NavBar cartNum={cartNum}></NavBar>
         <Products
           products={products} 
           onAdd={addToCart}  
-          onRemove={removeFromCart}/>}
+          onRemove={removeFromCart}/>
+          </>
+          }
         />
         <Route 
         path="/cart" element={
+          <>
+        <NavBar cartNum={cartNum}></NavBar>
         <Cart 
         products={cartProducts}
         onAdd={addToCart} 
-        onRemove={removeFromCart}/>}
+        onRemove={removeFromCart}/>
+        </>}
         />
       </Routes>
     </BrowserRouter>
