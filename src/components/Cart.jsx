@@ -4,7 +4,6 @@ import OneProduct from "./OneProduct";
 function Cart({ products, onAdd, onRemove }) {
   let total = 0;
   return (
-    // <div>Your cart is emty</div>
     <>
       <div className="all-products">
         {products.map(
@@ -23,17 +22,20 @@ function Cart({ products, onAdd, onRemove }) {
         )}
       </div>
       {total === 0 ? (
-    <></>
+    <div className="empty">
+      <h2>Vaša korpa je prazna.</h2> 
+      <h3>Vratite se u prodavnicu.</h3>
+    </div>
       ) : (
         <>
         <div className="container">
           <div className="div-order">
-            <h2 className="txt-your-order">Your order</h2>
+            <h2 className="txt-your-order">Vaša porudžbina</h2>
             <table className="table-order">
               <tr>
-                <th>Item</th>
-                <th>Amount</th>
-                <th>Price</th>
+                <th>Proizvod</th>
+                <th>Količina</th>
+                <th>Cena</th>
               </tr>
               {products.map((product) => (
                 <>
@@ -45,7 +47,7 @@ function Cart({ products, onAdd, onRemove }) {
                 </>
               ))}
             </table>
-            <h3 className="txt-total">Total: {total}rsd</h3>
+            <h3 className="txt-total">Ukupno: {total}rsd</h3>
           </div>
           </div>
         </>
