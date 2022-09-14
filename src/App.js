@@ -10,12 +10,12 @@ function App() {
    const [cartNum, setCartNum] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
    const [products, setProducts] = useState([
-      {
+    {
       id: 1,
-      url: "https://d2j6dbq0eux0bg.cloudfront.net/images/16197139/1971153906.jpg",
-      title: "illy intenso",
+      url: "https://online.idea.rs/images/products/414/414103960_1l.jpg?1655720111",
+      title: "Nespresso Miami",
       description:
-           " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455.00",
          amount: 0,
     },
@@ -25,7 +25,7 @@ function App() {
       title: "illy forte",
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-     price:"455.00",
+     price:"650.00",
       amount: 0,
     },
     {
@@ -34,88 +34,88 @@ function App() {
       title: "Nespresso Premium",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
-         amount: 0,
-    },
-     {
-      id: 4,
-      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/mug_800_800px.jpg",
-      title: "Nespresso Miami",
-      description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+        price:"3140.00",
          amount: 0,
     },
       {
-      id: 5,
+      id: 4,
       url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/7762-80_2_800_800px.png.webp",
       title: "Nespresso Chiaro",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+        price:"710.00",
+         amount: 0,
+    },
+     {
+      id: 5,
+      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/mug_800_800px.jpg",
+      title: "Nespresso Miami",
+      description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+        price:"710.00",
          amount: 0,
     },
       {
       id: 6,
-      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/mug_800_800px.jpg",
-      title: "Nespresso Miami",
+      url: "https://tuttocapsulebelgrade.com/wp-content/uploads/2021/01/COMPATIBILI-Capsula-768x768.png",
+      title: "Illy Classico",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+        price:"650.00",
          amount: 0,
     },
-     {
+       {
       id: 7,
-      url: "https://d2j6dbq0eux0bg.cloudfront.net/images/16197139/1971153906.jpg",
+      url: "https://tuttocapsulebelgrade.com/wp-content/uploads/2021/01/nespresso-capsules-intenso-bold-roast-768x768.jpg",
       title: "illy intenso",
       description:
            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+        price:"650.00",
          amount: 0,
     },
     {
       id: 8,
-      url:"https://tuttocapsulebelgrade.com/wp-content/uploads/2021/01/nespresso-capsules-forte-extra-bold-roast1.jpg",
-      title: "illy forte",
-      description:
-             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-     price:"455.00",
-      amount: 0,
-    },
-    {
-      id: 9,
-      url: "https://www.nespresso.rs/files/thumbs/files/files/thumbs_600/SRB-Premium_Selection_1200x12001_600_600px.png.webp",
-      title: "Nespresso Premium",
+      url: "https://online.idea.rs/images/products/414/414103953_1.jpg?1655720110",
+      title: "CostaCoffee Bright",
       description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455.00",
          amount: 0,
     },
      {
-      id: 10,
-      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/mug_800_800px.jpg",
-      title: "Nespresso Miami",
+      id: 9,
+      url:"https://online.idea.rs/images/products/431/431104001_1l.jpg?1539169867",
+      title: "Kafeterija Lija",
       description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+     price:"470.00",
+      amount: 0,
+    },
+      {
+      id: 10,
+      url: "https://online.idea.rs/images/products/414/414103958_1l.jpg?1655720111",
+      title: "CostaCoffee Signature",
+      description:
+        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455.00",
          amount: 0,
     },
       {
       id: 11,
-      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/7762-80_2_800_800px.png.webp",
-      title: "Nespresso Chiaro",
+      url: "https://online.idea.rs/images/products/431/431104002_1m.jpg?1539169868",
+      title: "Kafeterija Vuk",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+        price:"470.00",
          amount: 0,
     },
-      {
+     {
       id: 12,
-      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/mug_800_800px.jpg",
-      title: "Nespresso Miami",
+      url: "https://www.nespresso.rs/files/thumbs/files/images/product/thumbs_800/Cosi_22-00_800_800px.png.webp",
+      title: "Nespresso Cosi",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
-        price:"455.00",
+           " Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
+        price:"560.00",
          amount: 0,
     }
   ]);
