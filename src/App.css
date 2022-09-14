@@ -29,7 +29,6 @@ video{
   justify-content: center;
    align-items: center;
   color: wheat;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 .content>a{
   color:wheat;
@@ -47,7 +46,6 @@ video{
   padding-left: 25px;
   font-size: large;
   width: auto;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   text-align: center;
   /* position: fixed; */
 } 
@@ -77,7 +75,6 @@ video{
 }
 .card-price {
   font-size: 18px;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   /* margin-bottom: 10px; */
 }
 .all-products {
@@ -113,7 +110,6 @@ video{
 
 .card-body {
   margin: 10px;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   text-align: center;
   /* display: flex;
   flex-direction: column; */
@@ -180,7 +176,6 @@ a {
   background-color: rgb(196, 158, 133);
   padding: 20px;
   margin: 20px;
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
