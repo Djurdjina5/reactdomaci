@@ -12,8 +12,8 @@ function App() {
    const [products, setProducts] = useState([
     {
       id: 1,
-      url: "https://online.idea.rs/images/products/414/414103960_1l.jpg?1655720111",
-      title: "Nespresso Miami",
+      url: "https://online.idea.rs/images/products/414/414103959_1l.jpg?1655720111",
+      title: "CostaCoffee Lungo",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"455.00",
@@ -58,7 +58,7 @@ function App() {
       {
       id: 6,
       url: "https://tuttocapsulebelgrade.com/wp-content/uploads/2021/01/COMPATIBILI-Capsula-768x768.png",
-      title: "Illy Classico",
+      title: "illy Classico",
       description:
         "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
         price:"650.00",
@@ -85,7 +85,7 @@ function App() {
      {
       id: 9,
       url:"https://online.idea.rs/images/products/431/431104001_1l.jpg?1539169867",
-      title: "Kafeterija Lija",
+      title: "Kafeterija Pevac",
       description:
              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae quam cumque deleniti dolorem.",
      price:"470.00",
